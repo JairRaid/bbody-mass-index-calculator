@@ -46,5 +46,6 @@ Users should be able to:
 
 ## Author
 
-- 
+- email: rakotonirainyriija@gmail.com
+- facebook: https://web.facebook.com/jair.rakoto.3/
 

@@ -1,0 +1,34 @@
+@use "variables"as *;
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100;
+    font-family: 'inter', sans-serif;
+}
+
+.bg-gradient {
+    position: absolute;
+    z-index: -1;
+    top: -32px;
+    left: 0;
+    background: linear-gradient(to right, rgba(214, 252, 254, 0), #D6E6FE);
+    height: 640px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.bmi-calculator {
+    box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+}
+
+.bmi-info {
+    article {
+        box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+    }
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,85 @@
+@use "../base/typography"as *;
+@use "../variables"as *;
+@use "../fonts"as *;
+
+//Radio buttons
+input[type="radio"] {
+    appearance: none;
+    position: relative;
+    width: 31px;
+    height: 31px;
+    border: 1px solid #5e6e85;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+input[type="radio"] + label {
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    border: 1px solid #e1e7fe;
+    background-color: #e1e7fe;
+}
+
+input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    border-radius: 9999px;
+    background-color: #345ff6;
+}
+
+input[type="radio"]:hover:not(:checked) {
+    border: solid 1px $blue500;
+}
+
+//Numbers
+input[type="number"] {
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    -moz-appearance: textfield;
+
+    border: none;
+}
+
+.input-item {
+    position: relative;
+    display: flex;
+    background-color: white;
+    padding: 24px;
+    border: solid 1px $grey500;
+    border-radius: 12px;
+
+    label {
+        @include typography(.875rem, $grey500, 400, 150%, 0);
+        position: absolute;
+        top: -29px;
+        left: 0;
+    }
+
+    input {
+        font-family: 'Inter', sans-serif;
+        @include typography(1.5rem, $blue900, 600, 29px, -5%);
+        outline: none;
+        padding-right: 24px;
+        width: calc(100% - 24px);
+    }
+
+    span {
+        display: inline-block;
+        @include typography(1.5rem, $blue500, 600, 29px, 0);
+    }
+
+    &:has(input:focus) {
+        outline: solid 1px $blue500;
+    }
+}

@@ -1,0 +1,291 @@
+@use "base/typography"as *;
+@use "variables"as *;
+
+@media(min-width: 64.063rem) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bg-gradient {
+        width: calc(100% - 438px);
+        height: 737px;
+    }
+
+    //Header
+    .bg-gradient + header {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        gap: 0 32px;
+        margin: 88px 42px 88px 42px;
+        max-width: 1160px;
+
+        img[alt="bmi logo"] {
+            width: 64px;
+            margin-bottom: 96px;
+        }
+    }
+
+    .group1 {
+        h1 {
+            @include typography(4rem, $blue900, 600, 110%, -5%);
+            margin-bottom: 32px;
+        }
+
+        p {
+            @include typography(1rem, $grey500, 400, 150%, 0);
+            margin-bottom: 40px;
+        }
+    }
+
+    .radio-btns {
+        display: grid;
+        grid-template: auto/ repeat(2, 1fr);
+        gap: 0 24px;
+        margin-bottom: 61px;
+    }
+
+    .inputs-container {
+        margin-bottom: 32px;
+    }
+
+    .metric-inputs {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        gap: 0 24px;
+
+        .input-item {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+    }
+
+    .imperial-inputs {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        gap: 53px 24px;
+
+        .input-item {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+    }
+
+    .bmi-calculator {
+        padding: 32px;
+        background-color: #ffffff;
+        border-radius: 16px;
+        margin-top: 88px;
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 0 16px;
+            @include typography(1rem, $blue900, 600, 150%, 0);
+        }
+
+        h2 {
+            @include typography(1.5rem, $blue900, 600, 29px, -5%);
+            margin-bottom: 32px;
+        }
+
+        .bmi-result {
+            background-color: $blue500;
+            padding: 32px;
+            border-radius: 16px;
+            border-top-right-radius: 83px;
+            border-bottom-right-radius: 83px;
+            color: white;
+        }
+    }
+
+    .group2,
+    .group3 {
+        display: flex;
+    }
+
+    .bmi-result {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        gap: 0 24px;
+
+        .group2 {
+            flex-direction: column;
+
+            span {
+                @include typography(1rem, white, 600, 150%, 0);
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+
+            p {
+                @include typography(3rem, white, 600, 110%, -5%);
+            }
+        }
+
+        .group3 {
+            align-items: center;
+
+            p {
+                @include typography(.875rem, white, 400, 150%, 0);
+            }
+        }
+    }
+
+    .bmi-empty {
+        display: flex;
+        flex-direction: column;
+
+        .group2 {
+            margin-bottom: 16px;
+
+            span {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    //Main
+    main {
+        margin: 0 40px 0 40px;
+        max-width: 1160px;
+    }
+
+    //Bmi meaning
+    .bmi-meaning {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        gap: 0 131px;
+        padding-bottom: 86px;
+        padding-top: 50px;
+
+        img {
+            width: 100%;
+            max-width: 564px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            @include typography(3rem, $blue900, 600, 110%, -5%);
+            margin-bottom: 32px;
+        }
+
+        p {
+            @include typography(1rem, $grey500, 400, 150%, 0);
+        }
+    }
+
+    //health tips
+    .health-tips {
+        display: flex;
+        gap: 0 32px;
+        padding: 96px 0 96px 0;
+        background: linear-gradient(to right, rgba(214, 252, 254, 0), rgba(214, 230, 254, 0.25));
+        border-radius: 35px;
+
+        .article-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0 40px;
+        }
+
+        .img-container {
+            margin-bottom: 48px;
+        }
+
+        h3 {
+            @include typography(1.5rem, $blue900, 600, 29px, -5%);
+            margin-bottom: 24px;
+        }
+
+        p {
+            @include typography(1rem, $grey500, 400, 150%, 0);
+        }
+    }
+
+    //Bmi limitations
+    .bmi-limitations {
+        display: flex;
+        margin: 104px 0 0 0;
+        position: relative;
+
+        header {
+            margin: 0;
+            width: 100%;
+            margin-right: calc(139px + 40%);
+        }
+
+        h2 {
+            @include typography(3rem, $blue900, 600, 110%, -5%);
+            margin-bottom: 32px;
+        }
+
+        p {
+            @include typography(1rem, $grey500, 400, 150%, 0);
+        }
+    }
+
+    .bmi-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        left: calc(100% - 1001px);
+        gap: 32px;
+        width: 100%;
+        max-width: 961px;
+        padding-bottom: 115px;
+        margin: 0 0 0 40px;
+
+        article {
+            padding: 32px;
+            border-radius: 16px;
+            background-color: white;
+            flex-basis: 365px;
+        }
+
+        h3 {
+            @include typography(1.25rem, $blue900, 600, 150%, -5%);
+            display: flex;
+            align-items: center;
+            gap: 0 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .bmi-info {
+        article:first-child {
+            margin-left: 50%;
+            position: relative;
+            left: -99px;
+        }
+
+        article:nth-child(2),
+        article:nth-child(3) {
+            position: relative;
+            z-index: 1;
+        }
+
+        article:nth-child(4),
+        article:nth-child(5) {
+            position: relative;
+            left: -199px;
+            z-index: 2;
+        }
+    }
+
+
+    .hide {
+        display: none !important;
+    }
+}

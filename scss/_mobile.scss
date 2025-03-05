@@ -1,0 +1,220 @@
+@use "base/typography"as *;
+@use "variables"as *;
+
+@media(max-width: 48rem) {
+    .bg-gradient {
+        width: 100%;
+    }
+
+    //Header
+    header {
+        margin: 32px 24px 64px 24px;
+
+        .group1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        img[alt="bmi logo"] {
+            width: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .group1 {
+        h1 {
+            @include typography(3rem, $blue900, 600, 110%, -5%);
+            margin-bottom: 24px;
+        }
+
+        p {
+            @include typography(1rem, $grey500, 400, 150%, 0);
+            margin-bottom: 32px;
+        }
+    }
+
+    .radio-btns {
+        display: grid;
+        grid-template: auto/ repeat(2, 1fr);
+        margin-bottom: 53px;
+    }
+
+    .inputs-container {
+        margin-bottom: 24px;
+    }
+
+    .metric-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 45px 0;
+    }
+
+    .imperial-inputs {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        gap: 45px 16px;
+    }
+
+    .bmi-calculator {
+        padding: 24px;
+        background-color: #ffffff;
+        border-radius: 16px;
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 0 16px;
+            @include typography(1rem, $blue900, 600, 150%, 0);
+        }
+
+        h2 {
+            @include typography(1.5rem, $blue900, 600, 29px, -5%);
+            margin-bottom: 24px;
+        }
+
+        .bmi-result {
+            background-color: $blue500;
+            padding: 32px;
+            border-radius: 16px;
+            color: white;
+        }
+    }
+
+    .bmi-result {
+        @include typography(1rem, white, 400, 150%, 0);
+
+        .group2 {
+            margin-bottom: 24px;
+
+            span {
+                @include typography(1rem, white, 600, 150%, 0);
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+
+            p {
+                @include typography(3rem, white, 600, 110%, -5%);
+            }
+        }
+
+        .group3 {
+            p {
+                @include typography(.875rem, white, 400, 150%, 0);
+            }
+        }
+    }
+
+    .bmi-empty {
+        .group2 {
+            margin-bottom: 24px;
+
+            span {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    //Main
+    //Bmi meaning
+    .bmi-meaning {
+        .img-container {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        article {
+            margin: 48px 23.5px 0 23px;
+        }
+
+        h2 {
+            @include typography(2rem, $blue900, 600, 110%, -5%);
+            margin-bottom: 32px;
+        }
+
+        p {
+            @include typography(1rem, $grey500, 400, 150%, 0);
+        }
+    }
+
+    //health tips
+    .health-tips {
+        display: flex;
+        flex-direction: column;
+        gap: 40px 0;
+        background: linear-gradient(to right, rgba(214, 252, 254, 0), rgba(214, 230, 254, 0.25));
+        padding: 40px 0 40px 0;
+        margin-top: 61.61px;
+
+        .article-item {
+            margin: 0 24px 0 24px;
+        }
+
+        .img-container {
+            margin-bottom: 32px;
+        }
+
+        h3 {
+            @include typography(1.5rem, $blue900, 600, 29px, -5%);
+            margin-bottom: 24px;
+        }
+
+        p {
+            @include typography(1rem, $grey500, 400, 150%, 0);
+        }
+    }
+
+    //Bmi limitations
+    .bmi-limitations {
+        margin: 82px 24px 0 24px;
+
+        header {
+            margin: 0;
+            margin-bottom: 56px;
+            text-align: center;
+        }
+
+        h2 {
+            @include typography(2rem, $blue900, 600, 110%, -5%);
+            margin-bottom: 32px;
+        }
+
+        p {
+            @include typography(1rem, $grey500, 400, 150%, 0);
+        }
+    }
+
+    .bmi-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px 0;
+        margin-bottom: 96px;
+
+        article {
+            padding: 24px;
+            border-radius: 16px;
+            background-color: white;
+        }
+
+        h3 {
+            @include typography(1.25rem, $blue900, 600, 150%, -5%);
+            display: flex;
+            align-items: center;
+            gap: 0 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .empty {
+        color: $grey500;
+    }
+}

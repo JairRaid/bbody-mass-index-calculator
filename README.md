@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: https://github.com/JairRaid/bbody-mass-index-calculator
 - Live Site URL: 
 
 ## My process

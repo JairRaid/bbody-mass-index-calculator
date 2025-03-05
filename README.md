@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/JairRaid/bbody-mass-index-calculator
-- Live Site URL: 
+- Live Site URL: https://jairraid.github.io/body-mass-index-calculator/
 
 ## My process
 
